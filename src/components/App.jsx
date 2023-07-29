@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 import ContactList from "./ContactList";
 import Filter from "./Filter";
 
-class App extends Component{
+class App extends Component {
   state = {
     contacts: [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -63,7 +63,7 @@ class App extends Component{
         <ContactForm onSubmit={ this.addContact } />
         
         <h2>Contacts</h2>
-        <Filter value={this.state.filter || ''} onChange={this.handleFilterChange} />
+        <Filter value={this.state.filter} onChange={this.handleFilterChange} />
         <ContactList contacts={visibleContacts} onDelete={this.deleteContact} />
       </div>
     )
